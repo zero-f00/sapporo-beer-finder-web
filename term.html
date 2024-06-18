@@ -1,0 +1,17 @@
+<BODY>
+    <article id="term" />
+
+    <script>
+        fetch('https://sapbeerpato.microcms.io/api/v1/term',
+            { headers: { "X-MICROCMS-API-KEY": "z9lYyWkOVpvB8CiOORQgNxN7e8Ai9ck1mfuw" } })
+            .then((res) => {
+                return res.json();
+            })
+            .then((json) => {
+                document.getElementById("term").innerHTML = json.body;
+            })
+            .catch((reason) => {
+                console.log(reason);
+            });
+    </script>
+</BODY>
